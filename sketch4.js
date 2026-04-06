@@ -1,11 +1,13 @@
 let G;
 let P1;
+let S;
 let P2;
 
 function preload() {
   G = loadImage ("img3/Landscape.png");
   P1 = loadImage ("img3/Penguin1.png");
  // P2 = loadImage ("Penguin2.png");
+ S = loadImage ("img3/Snowflake.png");
 }
 
 function setup() {
@@ -24,12 +26,18 @@ function draw() {
  
   
   
-  //snowflake cursor
+  // //snowflake cursor
+  // if (mouseIsPressed === true) {
+  //   cursor('img3/Snowflake.png', 8, 8);
+  // } else {
+  //   cursor('img3/Snowflake.png');
+  // }
+  //rainbow mouse cursor
   if (mouseIsPressed === true) {
     cursor('img3/Snowflake.png', 8, 8);
   } else {
     cursor('img3/Snowflake.png');
-  }
   
+}
   
 }

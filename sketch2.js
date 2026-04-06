@@ -20,7 +20,8 @@ var speed = 70;
    C3 = loadImage ('img1/Cloud3.png');
     F1 = loadImage ("img1/Flower1.png");
     F2 = loadImage ("img1/Flower2.png");
-    R = loadImage ("img1/Rainbow.PNG"); 
+    R = loadImage ("img1/Rainbow.png"); 
+    L = loadImage ("img2/Leaf.png");
     
   }
 function setup() {
@@ -79,6 +80,7 @@ function draw() {
   image (C2, cloud2X - 20, 150, 300, 150);
   image (C3, cloud3X + 500, 160, 200, 100);
 
+
   
   
   //sun animation, will have to come back to figure out
@@ -93,9 +95,17 @@ function draw() {
   // }
 // }
   //rainbow mouse cursor
+  // if (mouseIsPressed === true) {
+  //   cursor(R);
+  // } else {
+  //   cursor(R);
+  // }
+
+//rainbow mouse cursor
   if (mouseIsPressed === true) {
-    cursor('img1/Rainbow (2).png', 8, 8);
+    cursor('img1/Rainbow.png', 8, 8); 
   } else {
-    cursor('img1/Rainbow (2).png');
-  }
+    cursor('img1/Rainbow.png');
+  
+}
 }
