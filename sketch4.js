@@ -13,6 +13,7 @@ var my = [];
 
 
 
+
 function preload() {
   G = loadImage ("img3/Landscape.png");
   P1 = loadImage ("img3/Penguin1.png");
@@ -23,6 +24,9 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+
+   circleXone = random(width);
+  circleYone = random(height);
 }
 
 function draw() {
@@ -30,10 +34,20 @@ function draw() {
 
    stroke("#95a8c5");
  // strokeWeight(1);
-  circle(circleXone, circleYone, 30, 30);
-  circleXone = circleXone - 100;
-  circleYone = circleYone - 100;
+  circle(circleXone, circleYone, 20);
+  circleXone = circleXone + 1;
+  circleYone = circleYone + 7;
+
+  if (circleYone > height) {
+    circleYone = 0;
+    circleXone = random(width);
+  }
+  if (circleXone > height) {
+    circleXone = 0;
+    circleYone = random(width);
+  }
   
+
  //image of the snowy landscape 
   image (G, -5, 150, 1550, 750);
   
@@ -44,10 +58,10 @@ function draw() {
   //snowman location
   image (snowman, 400, 498, 250, 310 )
 
-   //set shooting star to random location
-  //https://p5js.org/tutorials/variables-and-change/
-  circleXone = random(0, windowWidth);
-  circleYone = random(0, windowHeight); 
+  //  //set shooting star to random location
+  // //https://p5js.org/tutorials/variables-and-change/
+  // circleXone = random(0, windowWidth);
+  // circleYone = random(0, windowHeight); 
   
   
   // //snowflake cursor
