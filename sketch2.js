@@ -253,8 +253,8 @@ function windowResized() {
   ratio = min(windowWidth / design_w, windowHeight / design_h);
   createCanvas(windowWidth, windowHeight);
 
-  nextButton();
-  previousButton();
+ if (btn) nextButton();
+  if (prevbtn) previousButton();
   sun();
    moon();
 grass ();
