@@ -26,8 +26,7 @@ let star;
 let L;
 //let butterflies = [];
 let img;
-x = width / 2;
-y = height / 2;
+
 
 
 //grass image
