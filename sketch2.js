@@ -38,7 +38,7 @@ function preload() {
   C3 = loadImage("img1/Cloud3.png");
   F1 = loadImage("img1/Flower1.png");
   F2 = loadImage("img1/Flower2.png");
-  R = loadImage("img1/Rainbow.PNG");
+  R = loadImage("img1/Rainbow(1).png");
   // L = loadImage ("img2/Leaf.png");
   E1 = loadImage("img1/Face1.png");
   E2 = loadImage("img1/Face2.png");
