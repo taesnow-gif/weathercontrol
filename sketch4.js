@@ -40,10 +40,37 @@ function setup() {
    circleXone = random(width);
   circleYone = random(height);
 
-  let btn = createButton('Next Page');
-  btn.position(1402, 741);
+//code for the next page
+  let btn = createButton('Next ➜');
+  btn.position(1380, 730);
+  btn.style ('background', '#8cc4de');
+  btn.style('font-family', 'Schoolbell');
+  btn.style ('font-size', '20px');
+  btn.style('padding', '10px 18px');
+  btn.style ('border', 'none');
+  btn.style('border-radius', '25px');
+  btn.style ('font-weight', 'bold');
+  btn.style('box-shadow', '2px 4px 0px #0b8ad0');
+  btn.style('border', '2px solid #333');
+  btn.style('cursor', 'pointer');
   btn.mousePressed(() => {
-    window.location.href = 'page5.html';
+    window.location.href = 'index.html';
+  });
+  
+  let prevbtn = createButton ('⬅ Previous');
+  prevbtn.position (40, 730);
+   prevbtn.style ('background', '#8cc4de');
+  prevbtn.style('font-family', 'Schoolbell');
+  prevbtn.style ('font-size', '20px');
+  prevbtn.style('padding', '10px 18px');
+  prevbtn.style ('border', 'none');
+  prevbtn.style('border-radius', '25px');
+  prevbtn.style ('font-weight', 'bold');
+  prevbtn.style('box-shadow', '2px 4px 0px #0b8ad0');
+  prevbtn.style('border', '2px solid #333');
+  prevbtn.style('cursor', 'pointer');
+  prevbtn.mousePressed (() => {
+    window.location.href = 'page3.html';
   });
 }
 
@@ -51,7 +78,7 @@ function draw() {
   background('#4fa9db');
 
   
-
+//part of the code for the snowfall animation
    stroke("#95a8c5");
  // strokeWeight(1);
   circle(circleXone, circleYone, 20);
@@ -67,20 +94,9 @@ function draw() {
     circleYone = random(width);
   }
   
-
  //image of the snowy landscape 
   image (G, -5, 150, 1550, 750);
   
-  //penguin locations
-  //  image (P1, 1090, 600, 95, 180);
-  // image (P2, 980, 500, 100, 200);
-
-  // //Lego character
-  // image (L, 200, 400, 300, 300);
-
-  // //Snowman's Hat
-  // image (H, 470, 390, 100, 100);
- 
   //snowman location
   image (snowman, 400, 498, 250, 310);
 
@@ -98,16 +114,17 @@ function draw() {
     cursor('img3/Snowflake.png');
   
 }
-   //mouse trail
+   //mouse trail fdor the snowflake cursor
  var array_pos = (frameCount /'.5') % num; 
   mx[array_pos] = mouseX; 
   my[array_pos] = mouseY; 
-
 
   for (var i = 0; i < num; i++) {
     var index = (array_pos + 1 + i) % num; 
     image(S, mx[index], my[index], i, i); 
   }
+
+  //mousepressed for when you click on the lego character holding the hat
 if (mouseIsPressed === true) {
   image (LH, 200, 400, 300, 300);
   image (H, 480, 420, 100, 100);
@@ -115,6 +132,8 @@ if (mouseIsPressed === true) {
   image (L, 197, 400, 280, 300);
   image (H, 463, 390, 100, 100);
 }
+
+//hover function over penguin 1&2 
 if (mouseX < 1390 && mouseX > 1090 && mouseY < 700 && mouseY > 600) {
   image (img, 1350, 546, 300, 400);
 } else {
@@ -126,10 +145,10 @@ if (mouseX < 1080 && mouseX > 870 && mouseY < 700 && mouseY > 500) {
   image (P2, 870, 500, 100, 200);
 }
 
- 
-   textSize(24);
-  text("X: "+mouseX, 0, height/4);
-  text("Y: "+mouseY, 0, height/2);
+ //take out before submitting
+  //  textSize(24);
+  // text("X: "+mouseX, 0, height/4);
+  // text("Y: "+mouseY, 0, height/2);
 
 
 }
