@@ -94,6 +94,7 @@ function draw() {
   background("#23d2fd");
   frameRate(60);
 
+
   sun();
   moon();
   grass();
@@ -141,6 +142,8 @@ function draw() {
     var index = (array_pos + 1 + i) % num;
     image(R, mx[index], my[index], i, i);
   }
+
+    noCursor();
 }
 
 function previousButton() {
