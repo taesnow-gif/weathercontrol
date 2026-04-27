@@ -38,6 +38,8 @@ function preload () {
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
+  noCursor();
+
 //code for the next page
   let btn = createButton('Next ➜');
   btn.position(1380, 730);
@@ -111,6 +113,7 @@ if (cheerful) {
  tint(r, g, b);
   image (U, 857, 360, 300, 300);
   noTint();
+
 
   //adding a bounce function to setup for the froggies to jump
   bounce ();
